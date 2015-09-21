@@ -1,0 +1,21 @@
+body{ margin:0px; padding:0px; position:relative;}
+div#ac_background{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+} /*
+div#ac_background > img {
+    height:100%;
+    width:100%;
+    border:0;
+}
+
+.content{ position:relative; width:550px; height:1300px;}
+
+.logo{ position:absolute;  width:518px; height:117px; top:100px; left:100px;}
+
+.login{ position:absolute; top:0px; right:0px; width:200px; height:40px; background:url(../images/btn.png) no-repeat 0px 5px;}
+*/

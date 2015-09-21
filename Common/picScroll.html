@@ -1,0 +1,55 @@
+<div class="main980 f_n">
+	<div class="indexBottomPic">
+		<div id="productshow" style="overflow:hidden;height:160px;width:980px;">
+			 <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" cellspace="0">
+				<tr>
+				  <td valign="top" id="productshow1">
+				  	<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" cellspace="0">
+                  		<tbody>
+                    		<tr>
+							<{section  name=p1 loop=$productList}>
+					            <td valign="bottom"><ul><li><a href="showexample.php?id=<{$productList[p1].id}>"><img src="upload/<{$productList[p1].detailPic}>" width="176" height="132" border="0" /></li><li><{$productList[p1].title}></li></ul></td>
+							<{/section}>
+							</tr>
+						</tbody>
+					</table>				  	
+				 </td>
+				 <td id="productshow2" valign="top"></td>
+			    </tr>
+			</table>
+		</div>
+		<script type="text/javascript" language="javascript">
+			var speedProduct=15;
+			scrollltr=true;
+			productshow2.innerHTML=productshow1.innerHTML;
+			
+			function scrollDirection(ltr)
+			{
+			 scrollltr = ltr;
+			}
+			
+			function MarqueeProduct(){ 
+			if(scrollltr)
+			 {
+				if(productshow2.offsetWidth-productshow.scrollLeft<=0) 
+				productshow.scrollLeft-=productshow1.offsetWidth 
+				else{ 
+					productshow.scrollLeft++ 
+				}
+			 }
+			 else
+			 {
+				if(productshow.scrollLeft<=0) 
+					productshow.scrollLeft+=productshow2.offsetWidth 
+				else{ 
+					productshow.scrollLeft-- 
+				}
+			 } 
+			
+			} 
+			var MyMarProduct=setInterval(MarqueeProduct,speedProduct) 
+			productshow.onmouseover=function() {clearInterval(MyMarProduct)} 
+			productshow.onmouseout=function() {MyMarProduct=setInterval(MarqueeProduct,speedProduct)} 
+		</script>
+	</div>
+</div>
