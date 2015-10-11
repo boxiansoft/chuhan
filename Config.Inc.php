@@ -21,7 +21,6 @@ $smarty->debugging = false;//调试控制台
 include_once(BASE_PATH."\adodb\adodb.inc.php");
 $conn = ADONewConnection('mysql');
 //连接地址、数据库用户名、数据库密码、数据库名称
-$conn->PConnect('222.73.129.133','sq_chuhan','yygzschuhan','sq_chuhan') or die('连接错误');
 //$conn->PConnect('127.0.0.1','root','','chuhan') or die('连接错误');
 $conn->execute('set names utf8');
 $ADODB_FETCH = ADODB_FETCH_ASSOC;//指定按哪一种模式输出（表字段名、字段序列号），这里是指定按照字段名
